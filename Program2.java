@@ -1,45 +1,26 @@
-package ArmstrongNumber;
+package MergeArray;
 
 public class Program2 {
 
 	public static void main(String[] args) {
-		int num = 371;
-		int armNum = num;
-		int value;
-		int sum=0;
 		
-		while(num>0)
+		int ary1[] = {1,2,3,4};
+		int ary2[] = {5,6,7,8};
+		int ary3[] = new int [ary1.length+ary2.length];
+		
+		for(int i=0; i<ary1.length; i++)
 		{
-			value = num%10;
-			num = num/10;
-			sum = sum + value*value*value;
+			ary3[i] = ary1[i];
 		}
-		System.out.println(sum);
-		if(armNum==sum)
+		for(int j=0; j<ary2.length; j++)
 		{
-			System.out.println("Armstrong");
+			ary3[ary1.length+j] = ary2[j];
 		}
-		else
+		for(int value:ary3)
 		{
-		    System.out.println("Fails");	
+			System.out.print(value + " ");
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 	}
 
 }

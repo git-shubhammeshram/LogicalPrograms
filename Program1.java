@@ -1,33 +1,27 @@
-package ArmstrongNumber;
-
-import java.util.Scanner;
+package MergeArray;
 
 public class Program1 {
+
 	public static void main(String[] args) {
-		int num ;
+
+		int ary1[] = {1,2,3};
+		int ary2[] = {4,5,6,7,8,9};
+		int ary3[] = new int [ary1.length + ary2.length];
 		
-		System.out.println("Enter The Number\n");
-		Scanner x = new Scanner(System.in);
-		num = x.nextInt();
 		
-		int armNum = num;
-		int value;
-		int sum = 0;
-		
-		while(num>0)
+		for(int i=0; i<ary1.length; i++)
 		{
-			value = num%10;
-			num = num/10;
-			sum = sum+value*value*value;
+			ary3[i] = ary1[i];
 		}
-		System.out.println(sum);
-		if(armNum==sum)
+		
+		for(int j=0; j<ary2.length;j++)
 		{
-			System.out.println("Is an armstrong number");
+			ary3[ary1.length+j]=ary2[j];
 		}
-		else
+		
+		for(int value:ary3)
 		{
-			System.out.println("Is not at all");
+			System.out.print(value + " ");
 		}
 	}
 
